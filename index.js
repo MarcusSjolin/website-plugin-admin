@@ -1,11 +1,9 @@
 exports = module.exports = function (app) {
+    var assets = app.assets.add(__dirname + "/app")
+
     app.router.add("Admin", "/admin", function(req, res) {
-        res.send("This is an admin page!")
-    })
-    app.router.add("Admin", "/admin/json", function(req, res) {
-        res.json({message: "This is an admin page!"})
-    })
-    app.router.add("Admin", "/admin/json/array", function(req, res) {
-        res.json([{message: "This is an admin page!"}])
+        res.sendFile(__dirname + "/templates/index.html", {
+            assets: "/assets/123123/" + assets.reference
+        })
     })
 }
