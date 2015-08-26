@@ -17,7 +17,7 @@ var Home = require('./Pages/Index');
 
 
 var routes = (
-    <Route handler={App} path="/admin/">
+    <Route handler={App} path="/admin/?">
         <Route name="Home" path="/" handler={Home} />
         <DefaultRoute handler={Home} />
     </Route>
