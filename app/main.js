@@ -3,10 +3,13 @@ var Router = require("react-router")
 
 var {Route, RouteHandler, DefaultRoute, NotFoundRoute} = Router;
 
+
+var Header = require('./Partials/Header');
 var App = React.createClass({
     render () {
         return (
             <div>
+                <Header/>
                 <RouteHandler/>
             </div>
         )
