@@ -17,11 +17,13 @@ var App = React.createClass({
 });
 
 var Home = require('./Pages/Index');
+var Plugins = require('./Pages/Plugins');
 
 
 var routes = (
-    <Route handler={App} path="/admin/?">
-        <Route name="Home" path="/" handler={Home} />
+    <Route handler={App} path="/">
+        <Route name="Home" path="/admin" handler={Home} />
+        <Route name="Plugins" path="/admin/plugins" handler={Plugins} />
         <DefaultRoute handler={Home} />
     </Route>
 );
