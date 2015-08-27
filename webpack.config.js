@@ -1,9 +1,9 @@
-module.exports = function(home, root, filename) {
+module.exports = function(home, root) {
     return {
         resolveLoader: {
             root: home + "/node_modules"
         },
-        entry: __dirname +"/"+ filename,
+        entry: home + "/app/main.js",
         output: {
             path: home + "/.tmp",
             filename: "./admin.bundle.js"

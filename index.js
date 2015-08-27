@@ -1,9 +1,8 @@
-exports = module.exports = function (app) {
-    var assets = app.assets.add(__dirname)
+module.exports = function (app) {
+    console.log("adding "+ __dirname + "/.tmp")
+    app.assets.add("/assets", __dirname + "/.tmp")
 
-    app.router.add("Admin", "/admin", function(req, res) {
-        res.sendFile(__dirname + "/templates/index.html", {
-            assets: "/assets/"+assets.reference
-        })
+    app.get("/admin", function(req, res) {
+        res.sendFile(__dirname + "/templates/index.html")
     })
 }
