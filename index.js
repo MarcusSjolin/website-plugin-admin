@@ -4,4 +4,8 @@ module.exports = function (app) {
     app.get("/admin/?*", function(req, res) {
         res.sendFile(__dirname + "/templates/index.html")
     })
+    if (app.isDev()) {
+        app.devWatch(__dirname + "/app", "**/*")
+        app.devWatch(__dirname + "/index.html")
+    }
 }

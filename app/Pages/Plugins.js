@@ -20,7 +20,6 @@ module.exports = React.createClass({
             })
         }.bind(this))
     },
-    
     installPlugin (e) {
         var plugin = $(e.target).attr("data-plugin")
         var version = $(e.target).attr("data-version")
