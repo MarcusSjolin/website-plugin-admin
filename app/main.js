@@ -5,7 +5,7 @@ var $ = require('jquery')
 var {Route, RouteHandler, DefaultRoute, NotFoundRoute} = Router;
 
 var app = {
-    name: "website-core",
+    name: "website-plugin-admin",
     translations:{},
     locale: 'sv_SE',
     translate: function(keyword) {
@@ -17,8 +17,9 @@ var app = {
     }
 }
 $.ajax({
-    url: '/api/translations'
+    url: '/api/translations/admin'
 }).done(function(data) {
+    console.log("got data")
     app.translations = data
 
     var Header = require('./Partials/Header')(app);

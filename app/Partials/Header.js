@@ -7,7 +7,7 @@ module.exports = module.exports = function (app) {
         render: function() {
             return (
                 <nav className="navbar navbar-default">
-                    <div className="container-fluid">
+                    <div className="container">
                         <div className="navbar-header">
                             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-collapse-1" aria-expanded="false">
                                 <span className="sr-only">Toggle navigation</span>
@@ -20,8 +20,11 @@ module.exports = module.exports = function (app) {
 
                         <div className="collapse navbar-collapse" id="menu-collapse-1">
                             <ul className="nav navbar-nav">
-                                <li><Link to="Home">{app.translate('Home')}</Link></li>
                                 <li><Link to="Plugins">{app.translate('Plugins')}</Link></li>
+                            </ul>
+
+                            <ul className="nav navbar-nav pull-right">
+                                <li><a href="/">{app.translate('Home')}</a></li>
                             </ul>
                         </div>
                     </div>

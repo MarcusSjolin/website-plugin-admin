@@ -1,6 +1,6 @@
 module.exports = function (app) {
     app.assets.add("/admin/assets", __dirname + "/.tmp")
-    app.addTranslations('sv_SE', {
+    app.addTranslations('admin', 'sv_SE', {
         "Admin": "Administration",
         "Home": "Hem",
         "Dashboard": "Startpanelen",
